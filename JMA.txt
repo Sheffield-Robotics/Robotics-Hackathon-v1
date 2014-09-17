@@ -1,0 +1,11 @@
+Initial Ideas:
+
+1. Multi-Quadcopter Platform
+
+Currently the quadcopters operate as a single entity tied to one laptop. Here we intend to extend the driver so we can control more than one quadcopter from one ground station. This should begin with simple group takeoff and land. Ideally the result should be an information node making channels to each quadcopter available for control, and provide video and navdata information back from each to be used for autonomous flight.
+
+2. Multi-Youbot Platform
+
+We've got a collection of three youbots but no way of remotely controlling them. At present they only operate through commands directly given to them. This is no good. We need a driver that enables us to network control them from a laptop. This provides additional benefits: each youbot can be kept as a clean platform, we have a good platform for collaboration between the youbots pre-defined, a common architecture is in place so we don't need to re-engineer everything from scratch, importantly we have a safe stop when the youbots are performing an autonomous task, we can interrogate the youbots and log data remotely in an easily accessible manner to speed up experiments and make them a more efficient platform to work with.
+
+Currently there is a youbot driver, which contains everything needed to control the youbot via a simple keyboard interface. Step 1 let's network this so we can control more than one youbot from one station remotely. Step 2 Provide bridges for the laser scanner and 3D camera so everything is transmitted back. Step 3 Produce a GUI to tie it together. 
